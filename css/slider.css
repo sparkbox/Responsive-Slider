@@ -1,0 +1,145 @@
+/* @group Slider
+ */
+
+.slider {
+  padding: 13px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider li {
+  display: none;
+}
+
+.slider li.current {
+  display: block;
+  height: 100%;
+}
+
+.slider li.next {
+  left: 0;
+  position: absolute;
+  top: 13px;
+  z-index: 2;
+}
+
+.slider li img {
+  position: relative;
+  width: 100%;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider-prev, .slider-next {
+  height: 20px;
+  position: absolute;
+  text-indent: -99999px;
+  bottom: 16px;
+  width: 20px;
+  z-index: 1000;
+}
+
+.slider-prev {
+  background: url('/i/left-arrow.png') no-repeat;
+  left: 16px;
+}
+
+.slider-next {
+  background: url('/i/right-arrow.png') no-repeat;
+  right: 16px;
+}
+
+.slider-container .swap-controls ol {
+  float: left;
+  list-style: none;
+  margin: 0 0 0 50%;
+  position: relative;
+}
+
+.slider-container .swap-controls li {
+  float: left;
+}
+
+.slider-container .swap-button a {
+  background: #4c5b52;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  height: 10px;
+  margin: 0 10px 0 0;
+  opacity: .3;
+  text-indent: -99999px;
+  width: 10px;
+}
+
+.no-opacity .slider-container .swap-button a {
+  background: #aaa;
+}
+
+.slider-container .swap-button.current a {
+  background: #4c5b52;
+  opacity: 1;
+}
+
+.swap-controls {
+  bottom: 16px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.slider .current.sliding {
+  position: relative;
+}
+
+.slider li.next.sliding {
+  display: block;
+  left: 100%;
+  margin-left: 0;
+  width: 100%;
+}
+
+/* @end */
+
+@media all and (max-width: 720px) and (min-width: 321px) {
+
+.slider-container {
+  width: 100%;
+}
+
+.slider-container ul li img {
+  width: 100%;
+}
+
+}
+
+@media all and (width: 320px) and (orientation: portrait) {
+
+.slider-prev {
+  bottom: 20px;
+  left: 5px;
+}
+
+.slider-next {
+  bottom: 20px;
+  right: 5px;
+}
+
+.slider-container .swap-button a {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  height: 6px;
+  margin: 0 10px 0 0;
+  width: 6px;
+}
+
+.swap-controls {
+  bottom: 26px;
+}
+
+}
